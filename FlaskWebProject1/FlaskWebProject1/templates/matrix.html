@@ -1,0 +1,32 @@
+﻿{% extends "layout.html" %}
+
+{% block body %}
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                {% for x in range(str2len+1) %}
+                    <th> {{ x }} </th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for x in range(str1len+1) %}
+            <tr>
+
+                <td> {{x}} </td>
+                {% for y in range(str2len+1) %}
+                <td>  {{m[x][y]}}  </td>
+                {% endfor %}
+
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+    <p> {{str1}}</p>
+    {% for x in l %}
+        <p>{{x}}</p>
+    {% endfor %}
+    
+{% endblock %}
